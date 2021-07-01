@@ -1,0 +1,1 @@
+// three components for one page: 
