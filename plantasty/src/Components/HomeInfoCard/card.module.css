@@ -1,3 +1,12 @@
-header {
-    font: 20px
+.flexWrapper {
+  display: flex;
+  justify-content: space-between;
+  border: 5px solid red;
+  width: 70%;
+}
+
+img {
+  border: orangered;
+  width: 400px;
+  height: 300px;
 }
