@@ -6,15 +6,15 @@ function Nutrition() {
             <section>
             <div>
             <div>
-            <p>210</p> <br />
+            <p>210</p> 
             <p>Calories</p>
             </div>
             <div>
-            <p>21 g</p> <br />
+            <p>21 g</p> 
             <p>Protein</p>
             </div>
             <div>
-            <p>21 g</p> <br />
+            <p>21 g</p> 
             <p>Fibre</p>
             </div>
             </div>

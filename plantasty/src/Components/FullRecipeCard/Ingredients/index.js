@@ -1,23 +1,25 @@
 import React  from 'react';
+import styles from './ingredients.module.css';
 
 function Ingredients() {
    
         return (
-            <section>
+            <section className = {styles}>
             <div>
             <h2>Ingredients:</h2>
             <ul>
-            <li>Almond milk</li>
-            <li>Banana</li>
-            <li>Blueberries</li>
+            <li className = "checkbox-list">
+            <input type="checkbox"  name="ingredient" value="Banana" />Banana
+           </li>
+            <li>
+            <input type="checkbox"  name="ingredient" value="Banana" />Banana
+            </li>
+            <li>
+            <input type="checkbox"  name="ingredient" value="Banana" />Banana
+            </li>
             </ul>
             </div>
 
-            <div className="ingredient">
-            <input type="checkbox"  name="ingredient" value="Banana" />Banana
-            <input type="checkbox"  name="ingredient" value="Banana" />Banana
-            <input type="checkbox"  name="ingredient" value="Banana" />Banana
-            </div>
 
             <div>
             <button>Add  all ingredients to shopping list</button>
