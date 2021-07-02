@@ -14,10 +14,10 @@ function Navbar() {
             <Link to="/mealplan">My plan</Link>
           </li>
           <li>
-            <Link to="/vegucate">Vegucate Me page</Link>
+            <Link to="/vegucate">Vegucate Me</Link>
           </li>
           <li>
-            <Link to="/shopping">My shopping list</Link>
+            <Link to="/shopping">Shopping list</Link>
           </li>
           <li>
             <Link to="/favourites">Favourites</Link>

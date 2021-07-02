@@ -4,7 +4,7 @@ import styles from './card.module.css';
 
 function DisplayCard() {
   return (
-    <section className={styles.flexWrapper}>
+    <section className={styles.cardWrapper}>
       <div>
         <img
           src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1335&q=80"
@@ -18,8 +18,8 @@ function DisplayCard() {
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
           ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua.
-              </h3>
-              <button>Create my meal plan</button>
+        </h3>
+        <button>Create my meal plan</button>
       </div>
     </section>
   );
