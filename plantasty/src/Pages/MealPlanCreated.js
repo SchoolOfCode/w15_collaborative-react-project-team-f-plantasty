@@ -15,10 +15,10 @@ function MealPlanCreated() {
 
   function getMealPlan() {
     fetch(
-      'https://api.spoonacular.com/mealplanner/generate?apiKey=11cf2295cd61422389f3a0b5611fcb30&timeFrame=week&targetCalories=2000&Diet=Vegan'
+      'https://api.spoonacular.com/mealplanner/generate?apiKey=11cf2295cd61422389f3a0b5611fcb30&timeFrame=day&targetCalories=2000&Diet=Vegan'
     )
       .then((response) => response.json())
-      .then((data) => setMealData(data.week.monday.meals[0].title));
+      .then((data) => setMealData(data.meals[0].title));
   }
 
   return (
