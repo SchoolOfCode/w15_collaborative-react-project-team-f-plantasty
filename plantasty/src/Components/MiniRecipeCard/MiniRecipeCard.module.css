@@ -1,32 +1,37 @@
-.mrc-whole-container {
+.mrcWholeContainer {
     display: flex;
+    flex-direction: column;
     padding: 10px;
 }
 
-.mrc-sub-container {
+.mrcSubContainer {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     background-color: #fff;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     border: solid 2px #00120b;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0,0,0,0.15);
 }
 
-h3.mini-recipe-card-heading {
+h3.miniRecipeCardHeading {
     margin: 20px 10px;
     text-align: center;
 }
 
-.left-column, .right-column {
+.leftColumn, .rightColumn {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 25%;
 }
 
-.icon-background {
+.middleColumn {
+    width: 50%;
+}
+
+.iconBackground {
     background-color: [depends_on_api_values];
     height: 40px;
     width: 40px;
@@ -34,12 +39,18 @@ h3.mini-recipe-card-heading {
     padding: 5px;
 }
 
-.icon-background img {
-    height: 30px;
-    width: 30px;
+.Icon {
+    height: 40px;
+    width: 40px;
 }
 
-.meal-type {
+.recipeImage {
+    display: block;
+    margin: auto;
+    height: 300px;
+}
+
+.mealType {
     margin: 20px 10px 0 10px;
     color: #fff;
     background-color: #4ebd6e;
@@ -48,7 +59,7 @@ h3.mini-recipe-card-heading {
     text-align: center;
 }
 
-.mrc-swap-container {
+.mrcSwapContainer {
     display: flex;
     align-items: center;
     justify-content: center;
