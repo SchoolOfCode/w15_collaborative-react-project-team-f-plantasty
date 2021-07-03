@@ -1,0 +1,56 @@
+.mrc-whole-container {
+    display: flex;
+    padding: 10px;
+}
+
+.mrc-sub-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    border: solid 2px #00120b;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+h3.mini-recipe-card-heading {
+    margin: 20px 10px;
+    text-align: center;
+}
+
+.left-column, .right-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+}
+
+.icon-background {
+    background-color: [depends_on_api_values];
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.icon-background img {
+    height: 30px;
+    width: 30px;
+}
+
+.meal-type {
+    margin: 20px 10px 0 10px;
+    color: #fff;
+    background-color: #4ebd6e;
+    padding: 5px 40px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.mrc-swap-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
