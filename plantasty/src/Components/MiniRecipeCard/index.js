@@ -46,3 +46,5 @@ function MiniRecipeCard() {
         </div>  
     )
 }
+
+export default MiniRecipeCard;
