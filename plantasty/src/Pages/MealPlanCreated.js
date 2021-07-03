@@ -3,13 +3,16 @@
 import Navbar from '../Components/Header/Navbar';
 import Footer from '../Components/Footer';
 import React from 'react';
+import MiniRecipeCard from '../Components/MiniRecipeCard';
 
 function MealPlanCreated() {
   return (
     <div>
       <div>
         <Navbar />
-        <h1>Meal plan page - but which one?</h1>
+      </div>
+      <div>
+        <MiniRecipeCard />
       </div>
       <footer>
         <Footer />

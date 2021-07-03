@@ -1,4 +1,5 @@
-import "./button.module.css"
+import React from 'react';
+import styles from './IconButton.module.css'
 
 // text button component for use site wide
 // need component functional code followed by jsx?
@@ -6,7 +7,7 @@ import "./button.module.css"
 function IconButton() {
 
     return (
-        <button className="Icon-button">
+        <button className={styles.IconButton}>
             <div className="Left-column">
                 <img></img>
             </div>

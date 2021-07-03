@@ -1,49 +1,45 @@
-import IconButton from `../IconButton`;
-//import `./MiniRecipeCard.module.css`;
+import IconButton from '../IconButton';
+import styles from './MiniRecipeCard.module.css';
 
 function MiniRecipeCard() {
 
     return (
-        <div className="mrc-whole-container">
-            <div className="mrc-sub-container">
-                <h3 className="mini-recipe-card-heading">[insert_recipe_title]</h3>
-                <div className="left-column">
-                    <div className="icon-background">
-                        <img className="health-icon">
-
-                        </img>
+        <div className={styles.mrcWholeContainer}>
+            <div className={styles.mrcSubContainer}>
+                <h3 className={styles.miniRecipeCardHeading}>[insert_recipe_title]</h3>
+                <div className={styles.leftColumn}>
+                    <div className={styles.iconBackground}>
+                    {/* <img className={styles.healthIcon}>
+                        </img> */}
                     </div>
-                    <div className="icon-background">
-                        <img className="protein-icon">
-
-                        </img>
+                    <div className={styles.iconBackground}>
+                        {/* <img className={styles.proteinIcon}>
+                        </img> */}
                     </div>
                 </div>
-                <div className="middle-column">
-                    <img className="recipe-image">
+                <div className={styles.middleColumn}>
+                    {/* <img className={styles.recipeImage}>
                         [insert_recipe_image]
-                    </img>
+                    </img> */}
                 </div>
-                <div className="right-column">
-                    <div className="icon-background">
-                        <img className="cooking-time-icon">
-
-                        </img>
+                <div className={styles.rightColumn}>
+                    <div className={styles.iconBackground}>
+                        {/* <img className={styles.cookingTimeIcon}>
+                        </img> */}
                     </div>
-                    <div className="icon-background">
-                        <img className="carbon-footprint-icon">
-
-                        </img>
+                    <div className={styles.iconBackground}>
+                        {/* <img className={styles.carbonFootprintIcon}>
+                        </img> */}
                     </div>
                 </div>
-                <h4 className="meal-type">
+                <h4 className={styles.mealType}>
                     [insert_meal_type]
                 </h4>
             </div>
-            <div className="mrc-swap-container">
+            <div className={styles.mrcSwapContainer}>
                 <IconButton/ >
             </div>
-        </div>  
+        </div>
     )
 }
 
