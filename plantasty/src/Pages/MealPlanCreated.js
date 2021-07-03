@@ -9,16 +9,16 @@ import MiniRecipeCard from '../Components/MiniRecipeCard';
 // get api key and save in variable
 // do the fetch request in a function
 
-
-
-
 function MealPlanCreated() {
+  // const [mealData, setMealData] = useState("");
 
- // const [mealData, setMealData] = useState("");
-
- function getMealPlan() {
-   fetch("https://api.spoonacular.com/mealplanner/generate?apiKey=11cf2295cd61422389f3a0b5611fcb30&timeFrame=week&targetCalories=2000&Diet=Vegan").then((response) => response.json()).then((data) => console.log(data));
- }
+  function getMealPlan() {
+    fetch(
+      'https://api.spoonacular.com/mealplanner/generate?apiKey=11cf2295cd61422389f3a0b5611fcb30&timeFrame=week&targetCalories=2000&Diet=Vegan'
+    )
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }
 
   return (
     <div>
@@ -28,9 +28,7 @@ function MealPlanCreated() {
       <div>
         <MiniRecipeCard />
       </div>
-      <button onClick={getMealPlan}>
-        Help
-      </button>
+      <button onClick={getMealPlan}>Help</button>
       <footer>
         <Footer />
       </footer>
