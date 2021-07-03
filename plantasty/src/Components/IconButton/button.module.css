@@ -1,0 +1,30 @@
+.Icon-button {
+    border: solid 2px #d1d1d1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    padding: 8px 32px;
+    background-color: #fff;
+    color: #00120B;
+}
+
+.Icon-button:hover {
+    box-shadow: 0 0 4px rgba(0,0,0,0.15);
+    background-color: #058c42;
+    color: #fff;
+}
+
+.Left-column {
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+    padding: 0 10px;
+    width: 40%;
+}
+
+.Right-column {
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    padding: 0 10px;
+    width: 60%;
+}
