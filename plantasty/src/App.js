@@ -1,6 +1,6 @@
 import React from "react";
 import './App.css';
-import RecipePage from './Pages/RecipePage';
+/* import RecipePage from './Pages/RecipePage';
 function App() {
   return (
     <div className="App">
@@ -9,5 +9,5 @@ function App() {
     </div>
   );
 }
-
+*/
 export default App;
