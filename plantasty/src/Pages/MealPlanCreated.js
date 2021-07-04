@@ -1,24 +1,45 @@
-// url  /created
-// can navigate to recipe page to view full recipe - API call
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from '../Components/Header/Navbar';
 import Footer from '../Components/Footer';
 import React from 'react';
 import MiniRecipeCard from '../Components/MiniRecipeCard';
 
-// Toms plan ideas:
-// get api key and save in variable
-// do the fetch request in a function
+// Alina APIKey: 'https://api.spoonacular.com/mealplanner/generate?apiKey=11cf2295cd61422389f3a0b5611fcb30&timeFrame=day&targetCalories=2000&Diet=Vegan';
+//Tania APIKey:'https://api.spoonacular.com/mealplanner/generate?apiKey=11cf2295cd61422389f3a0b5611fcb30&timeFrame=day&targetCalories=2000&Diet=Vegan'
 
 function MealPlanCreated() {
-  const [mealData, setMealData] = useState('');
+  const [mealData, setMealData] = useState([]);
+
+  // this creates errors I don't know what to do T_T
+  // useEffect(() => {
+  //   fetch(
+  //     'https://api.spoonacular.com/mealplanner/generate?apiKey=11cf2295cd61422389f3a0b5611fcb30&timeFrame=day&targetCalories=2000&Diet=Vegan'
+  //   )
+  //     .then((response) => response.json())
+  //     .then((mealDataArray) => {
+  //       const meals = mealDataArray.meals; // get meals data from JSON
+  //       const recipeTitles = meals.map((meal) => {
+  //         return meal.title;
+  //       });
+  //       setMealData(recipeTitles);
+  //     });
+  // }, []);
 
   function getMealPlan() {
     fetch(
-      'https://api.spoonacular.com/mealplanner/generate?apiKey=11cf2295cd61422389f3a0b5611fcb30&timeFrame=day&targetCalories=2000&Diet=Vegan'
+      'https://api.spoonacular.com/mealplanner/generate?apiKey=81d1af1612cd4093abbfa7b29f39fd3e&timeFrame=day&targetCalories=2000&Diet=Vegan'
     )
       .then((response) => response.json())
-      .then((data) => setMealData(data.meals[0].title));
+      .then((mealDataArray) => {
+        const meals = mealDataArray.meals;
+        console.log(meals);
+        const recipeTitles = meals.map((meal) => {
+          return meal.title;
+        });
+        console.log(recipeTitles);
+        setMealData(recipeTitles);
+      });
+    console.log('woohoo');
   }
 
   return (
@@ -27,13 +48,14 @@ function MealPlanCreated() {
         <Navbar />
       </div>
       <div>
-        <MiniRecipeCard text={mealData} />
+        {/* surely there is a better way to do this? */}
+        <MiniRecipeCard text={mealData[0]} />
       </div>
       <div>
-        <MiniRecipeCard />
+        <MiniRecipeCard text={mealData[1]} />
       </div>
       <div>
-        <MiniRecipeCard />
+        <MiniRecipeCard text={mealData[2]} />
       </div>
       <button onClick={getMealPlan}>Help</button>
       <footer>
