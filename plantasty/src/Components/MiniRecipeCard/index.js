@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './MiniRecipeCard.module.css';
+import TextButton from '../TextButton';
 
 function MiniRecipeCard(props) {
   return (
@@ -48,7 +49,7 @@ function MiniRecipeCard(props) {
         <h4 className={styles.mealType}>[insert_meal_type]</h4>
       </div>
       <div className={styles.mrcSwapContainer}>
-        <button>SWAP</button>
+        <TextButton text={'SWAP'} />
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './card.module.css';
+import TextButton from '../TextButton';
 // Display card for home stuff
 
 function DisplayCard() {
@@ -19,7 +20,7 @@ function DisplayCard() {
           ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua.
         </h3>
-        <button>Create my meal plan</button>
+        <TextButton text={'Create my meal plan'} />
       </div>
     </section>
   );
