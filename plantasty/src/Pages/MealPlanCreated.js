@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Navbar from '../Components/Header/Navbar';
 import Footer from '../Components/Footer';
 import React from 'react';
 import MiniRecipeCard from '../Components/MiniRecipeCard';
+import TextButton from '../Components/TextButton';
 
 // Alina APIKey: 'https://api.spoonacular.com/mealplanner/generate?apiKey=11cf2295cd61422389f3a0b5611fcb30&timeFrame=day&targetCalories=2000&Diet=Vegan';
 //Tania APIKey:'https://api.spoonacular.com/mealplanner/generate?apiKey=11cf2295cd61422389f3a0b5611fcb30&timeFrame=day&targetCalories=2000&Diet=Vegan'
@@ -48,6 +49,9 @@ function MealPlanCreated() {
         <Navbar />
       </div>
       <div>
+        <TextButton text="Monday" onClick={getMealPlan} />
+      </div>
+      <div>
         {/* surely there is a better way to do this? */}
         <MiniRecipeCard text={mealData[0]} />
       </div>
@@ -57,7 +61,7 @@ function MealPlanCreated() {
       <div>
         <MiniRecipeCard text={mealData[2]} />
       </div>
-      <button onClick={getMealPlan}>Help</button>
+
       <footer>
         <Footer />
       </footer>
