@@ -2,7 +2,8 @@ import { Route, BrowserRouter, Switch } from 'react-router-dom'; // define diffe
 import './App.css';
 import HomePage from './Pages/HomePage';
 import VegucateMe from './Pages/VegucateMe';
-import MealPlanCreated from './Pages/MealPlanCreated';
+// import MealPlanCreated from './Pages/MealPlanCreated';
+import MealPlanForm from './Pages/MealPlanForm';
 
 function App() {
   return (
@@ -13,14 +14,14 @@ function App() {
             <HomePage />
           </Route>
           <Route path="/mealplan">
-            <MealPlanCreated />
+            <MealPlanForm />
           </Route>
           <Route path="/vegucate">
             <VegucateMe />
           </Route>
         </Switch>
       </BrowserRouter>
-        </div>
+    </div>
   );
 }
 
