@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Navbar from '../Components/Header/Navbar';
 import Footer from '../Components/Footer';
 import MiniRecipeCard from '../Components/MiniRecipeCard';
-import TextButton from '../Components/TextButton';
+// import TextButton from '../Components/TextButton';
 
 // Alina APIKey: 'https://api.spoonacular.com/mealplanner/generate?apiKey=11cf2295cd61422389f3a0b5611fcb30&timeFrame=day&targetCalories=2000&Diet=Vegan';
-//Tania APIKey:'https://api.spoonacular.com/mealplanner/generate?apiKey=11cf2295cd61422389f3a0b5611fcb30&timeFrame=day&targetCalories=2000&Diet=Vegan'
+//Tania APIKey:'https://api.spoonacular.com/mealplanner/generate?apiKey=81d1af1612cd4093abbfa7b29f39fd3e&timeFrame=day&targetCalories=2000&Diet=Vegan'
 
 function MealPlanCreated() {
   const [mealData, setMealData] = useState([]);
@@ -27,7 +27,7 @@ function MealPlanCreated() {
 
   function getMealPlan() {
     fetch(
-      'https://api.spoonacular.com/mealplanner/generate?apiKey=11cf2295cd61422389f3a0b5611fcb30&timeFrame=day&targetCalories=2000&Diet=Vegan'
+      'https://api.spoonacular.com/mealplanner/generate?apiKey=81d1af1612cd4093abbfa7b29f39fd3e&timeFrame=day&targetCalories=2000&Diet=Vegan'
     )
       .then((response) => response.json())
       .then((mealDataArray) => {
@@ -47,14 +47,15 @@ function MealPlanCreated() {
       <div>
         <Navbar />
       </div>
-      <div>
+      <button onClick={getMealPlan}>Get Meal plan</button>
+      {/* <div>
         <TextButton text={'Monday'} onClick={getMealPlan} />
         <TextButton text={'Tuesday'} onClick={getMealPlan} />
         <TextButton text={'Wednesday'} onClick={getMealPlan} />
         <TextButton text={'Thursday'} onClick={getMealPlan} />
         <TextButton text={'Friday'} onClick={getMealPlan} />
         <TextButton text={'Sunday'} onClick={getMealPlan} />
-      </div>
+      </div> */}
       <div>
         {/* surely there is a better way to do this? */}
         <MiniRecipeCard text={mealData[0]} />
