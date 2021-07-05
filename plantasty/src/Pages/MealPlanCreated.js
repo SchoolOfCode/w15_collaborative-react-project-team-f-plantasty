@@ -4,8 +4,10 @@ import Footer from '../Components/Footer';
 import React from 'react';
 import MiniRecipeCard from '../Components/MiniRecipeCard';
 
-// Alina APIKey: 'https://api.spoonacular.com/mealplanner/generate?apiKey=11cf2295cd61422389f3a0b5611fcb30&timeFrame=day&targetCalories=2000&Diet=Vegan';
-//Tania APIKey:'https://api.spoonacular.com/mealplanner/generate?apiKey=11cf2295cd61422389f3a0b5611fcb30&timeFrame=day&targetCalories=2000&Diet=Vegan'
+const AlinaAPI =
+  'https://api.spoonacular.com/mealplanner/generate?apiKey=11cf2295cd61422389f3a0b5611fcb30&timeFrame=day&targetCalories=2000&Diet=Vegan';
+const TaniaAPI =
+  'https://api.spoonacular.com/mealplanner/generate?apiKey=11cf2295cd61422389f3a0b5611fcb30&timeFrame=day&targetCalories=2000&Diet=Vegan';
 
 function MealPlanCreated() {
   const [mealData, setMealData] = useState([]);
@@ -26,9 +28,7 @@ function MealPlanCreated() {
   // }, []);
 
   function getMealPlan() {
-    fetch(
-      'https://api.spoonacular.com/mealplanner/generate?apiKey=81d1af1612cd4093abbfa7b29f39fd3e&timeFrame=day&targetCalories=2000&Diet=Vegan'
-    )
+    fetch(`${TaniaAPI}`)
       .then((response) => response.json())
       .then((mealDataArray) => {
         const meals = mealDataArray.meals;
