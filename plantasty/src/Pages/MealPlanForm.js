@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import MealList from '../Components/MealList';
 import Navbar from '../Components/Header/Navbar';
 import Footer from '../Components/Footer';
+import CaloriesInput from '../Components/CaloriesInput';
 
 function MealPlanForm() {
   const [mealData, setMealData] = useState(null);
@@ -12,8 +13,8 @@ function MealPlanForm() {
   //   const TomAPI = '5b5269dd70b849018665136bf0eb41c9';
   const AlinaAPI2 = 'ef968f4556ed4b3f880221d46d7bd1b9';
 
-  function handleChange(e) {
-    setCalories(e.target.value);
+  function handleChange(number) {
+    setCalories(number);
   }
 
   function getMealData() {
@@ -35,7 +36,7 @@ function MealPlanForm() {
         <Navbar />
       </div>
       <section className="controls">
-        <input type="number" placeholder="Calories" onChange={handleChange} />
+        <CaloriesInput handlechange={handleChange} />
       </section>
       <button onClick={getMealData}> Get daily plan</button>
       {mealData && <MealList mealData={mealData} />}
