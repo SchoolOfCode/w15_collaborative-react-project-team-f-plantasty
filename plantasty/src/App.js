@@ -3,6 +3,7 @@ import './App.css';
 import HomePage from './Pages/HomePage';
 import VegucateMe from './Pages/VegucateMe';
 import MealPlanCreated from './Pages/MealPlanCreated';
+import MyShoppingList from './Components/MyShoppingList/MyShoppingList';
 
 function App() {
   return (
@@ -18,8 +19,12 @@ function App() {
           <Route path="/vegucate">
             <VegucateMe />
           </Route>
+          <Route path="/MyShoppingList">
+            <MyShoppingList />
+          </Route>
         </Switch>
       </BrowserRouter>
+      
         </div>
   );
 }

@@ -1,0 +1,24 @@
+.Shopping_List_Container {
+   
+}
+
+.Shopping_List_Title > h1 {
+    text-align: center ;
+}
+
+.Shopping_List_Search {
+    width: 20%;
+    margin: auto;
+    display: flex ;
+    
+}
+
+.Shopping_List_List {
+    border: 1px solid red;
+    width: 50%;
+    height: 300px;
+    margin: auto;
+    background-color: salmon;
+    margin-top: 30px;
+}
+
