@@ -18,11 +18,13 @@ let intolerances = [
 ];
 
 function Q2() {
+  
   let userAllergy = [];
   function handleClick(event) {
-    userAllergy.push(event); // add selected allergy to user array
+    userAllergy.push(event); // add selected allergy to user array to use later
     console.log(userAllergy);
   }
+
   return (
     <div>
       <h1>INTOLERANCES</h1>
@@ -33,9 +35,8 @@ function Q2() {
           handleChange={handleClick}
         />
       ))}
-
       <Link to={'/myPlan'}>
-        <button> Click Me </button>
+        <button> Generate plan </button>
       </Link>
     </div>
   );
