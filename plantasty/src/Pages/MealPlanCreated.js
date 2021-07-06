@@ -10,7 +10,7 @@ const TomAPI = '5b5269dd70b849018665136bf0eb41c9';
 
 // URL variables
 let calories = 2000;
-let diet = 'Vegan';
+let diet = 'Vegan'; // value passed on from q1 page
 let intolerances = 'Egg'; // just for test
 // let intolerances = userAllergy array passed on from Q2 page : .split?
 let URL = `https://api.spoonacular.com/mealplanner/generate?apiKey=${TaniaAPI}&timeFrame=day&targetCalories=${calories}&Diet=${diet}&intolerance=${intolerances}`;
@@ -55,3 +55,14 @@ function MealPlanCreated() {
 }
 
 export default MealPlanCreated;
+
+// window.location.href = '../Question/question.html' + quizUrl;
+
+// let urlParams = new URLSearchParams(window.location.search);
+// console.log(urlParams.toString());
+
+// let quizUrl = urlParams.toString();
+// console.log(`https://opentdb.com/api.php?${quizUrl}`);
+
+// // Fetch request to the API
+// fetch(`https://opentdb.com/api.php?${quizUrl}`);
