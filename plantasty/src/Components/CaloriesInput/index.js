@@ -6,7 +6,7 @@ export default function CaloriesInput({ handleChange }) {
       <input
         type="number"
         placeholder="Calories e.g 2000"
-        onchange={(event) => handleChange(event.target.value)}
+        onChange={(event) => handleChange(event.target.value)}
       />
     </div>
   );
