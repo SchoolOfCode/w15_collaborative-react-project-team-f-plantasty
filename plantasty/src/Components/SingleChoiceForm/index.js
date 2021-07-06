@@ -1,5 +1,3 @@
-// single choice
-
 import React from 'react'
 
 function SingleChoiceForm() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../Components/Header/Navbar';
 import Footer from '../Components/Footer';
-import HomeInfoCard from '../Components/HomeInfoCard';
+import HomeInfoCard from '../Components/InfoCard';
 import Hero from '../Components/Hero'
 function HomePage() {
   return (

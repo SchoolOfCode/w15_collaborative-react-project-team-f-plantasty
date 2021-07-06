@@ -19,7 +19,7 @@ function MealPlanCreated() {
     fetch(`${TomAPI}`)
       .then((response) => response.json())
       .then((mealDataArray) => {
-        const meals = mealDataArray.meals; // just get the meals// push to current meals if current meals is empty
+        const meals = mealDataArray.meals; // just get the meals
         console.log('three meals received:', meals);
         setMealData(meals);
       });
