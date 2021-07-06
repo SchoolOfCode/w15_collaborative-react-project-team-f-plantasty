@@ -11,7 +11,10 @@ function Navbar() {
       <nav>
         <ul>
           <li>
-            <Link to="/mealplan">My plan</Link>
+            <Link to="/createplan">Create plan</Link>
+          </li>
+          <li>
+            <Link to="/myplan">My plan</Link>
           </li>
           <li>
             <Link to="/vegucate">Vegucate Me</Link>

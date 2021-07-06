@@ -2,8 +2,10 @@ import { Route, BrowserRouter, Switch } from 'react-router-dom'; // define diffe
 import './App.css';
 import HomePage from './Pages/HomePage';
 import VegucateMe from './Pages/VegucateMe';
-// import MealPlanCreated from './Pages/MealPlanCreated';
+import MealPlanCreated from './Pages/MealPlanCreated';
 import MealPlanForm from './Pages/MealPlanForm';
+import Q1 from './Pages/Q1';
+import Q2 from './Pages/Q2';
 
 function App() {
   return (
@@ -13,8 +15,17 @@ function App() {
           <Route path="/" exact>
             <HomePage />
           </Route>
-          <Route path="/mealplan">
+          <Route path="/myplan">
+            <MealPlanCreated />
+          </Route>
+          <Route path="/createplan" exact>
             <MealPlanForm />
+          </Route>
+          <Route path="/createplan/q1" exact>
+            <Q1 />
+          </Route>
+          <Route path="/createplan/q2">
+            <Q2 />
           </Route>
           <Route path="/vegucate">
             <VegucateMe />

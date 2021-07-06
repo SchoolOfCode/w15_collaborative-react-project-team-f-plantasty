@@ -4,22 +4,27 @@ import Footer from '../Components/Footer';
 import React from 'react';
 import MiniRecipeCard from '../Components/MiniRecipeCard';
 
-const AlinaAPI =
-  'https://api.spoonacular.com/mealplanner/generate?apiKey=11cf2295cd61422389f3a0b5611fcb30&timeFrame=day&targetCalories=2000&Diet=Vegan';
-const TaniaAPI =
-  'https://api.spoonacular.com/mealplanner/generate?apiKey=11cf2295cd61422389f3a0b5611fcb30&timeFrame=day&targetCalories=2000&Diet=Vegan';
-const TomAPI =
-  'https://api.spoonacular.com/mealplanner/generate?apiKey=5b5269dd70b849018665136bf0eb41c9&timeFrame=day&targetCalories=2000&Diet=Vegan';
+const AlinaAPI = '11cf2295cd61422389f3a0b5611fcb30';
+const TaniaAPI = '81d1af1612cd4093abbfa7b29f39fd3e';
+const TomAPI = '5b5269dd70b849018665136bf0eb41c9';
+
+// URL variables
+let calories = 2000;
+let diet = 'Vegan'; // value passed on from q1 page
+let intolerances = 'Egg'; // just for test
+// let intolerances = userAllergy array passed on from Q2 page : .split?
+let URL = `https://api.spoonacular.com/mealplanner/generate?apiKey=${TaniaAPI}&timeFrame=day&targetCalories=${calories}&Diet=${diet}&intolerance=${intolerances}`;
+console.log(URL);
 
 function MealPlanCreated() {
   const [mealData, setMealData] = useState([]);
   // look up at redux reducer for possible future use
 
   useEffect(() => {
-    fetch(`${TomAPI}`)
+    fetch(`${URL}`)
       .then((response) => response.json())
       .then((mealDataArray) => {
-        const meals = mealDataArray.meals; // just get the meals// push to current meals if current meals is empty
+        const meals = mealDataArray.meals; // just get the meals
         console.log('three meals received:', meals);
         setMealData(meals);
       });
@@ -50,3 +55,14 @@ function MealPlanCreated() {
 }
 
 export default MealPlanCreated;
+
+// window.location.href = '../Question/question.html' + quizUrl;
+
+// let urlParams = new URLSearchParams(window.location.search);
+// console.log(urlParams.toString());
+
+// let quizUrl = urlParams.toString();
+// console.log(`https://opentdb.com/api.php?${quizUrl}`);
+
+// // Fetch request to the API
+// fetch(`https://opentdb.com/api.php?${quizUrl}`);
