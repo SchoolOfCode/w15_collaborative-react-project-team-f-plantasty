@@ -1,0 +1,7 @@
+.isItemCompleted-done {
+    text-decoration: line-through;
+  }
+
+  .isItemCompleted {
+    text-decoration: none;
+  }

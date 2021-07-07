@@ -1,9 +1,10 @@
-import { Route, BrowserRouter, Switch } from 'react-router-dom'; // define different paths in URL and which component should be loaded
-import './App.css';
-import HomePage from './Pages/HomePage';
-import VegucateMe from './Pages/VegucateMe';
-import MealPlanCreated from './Pages/MealPlanCreated';
-import MyShoppingList from './Components/MyShoppingList/MyShoppingList';
+import { Route, BrowserRouter, Switch } from "react-router-dom"; // define different paths in URL and which component should be loaded
+import "./App.css";
+import HomePage from "./Pages/HomePage";
+import VegucateMe from "./Pages/VegucateMe";
+import MealPlanCreated from "./Pages/MealPlanCreated";
+// import ShoppingList2 from "./Components/ShoppingItems/ShoppingList2";
+import ShoppingList2 from "./Pages/ShoppingListPage";
 
 function App() {
   return (
@@ -19,13 +20,12 @@ function App() {
           <Route path="/vegucate">
             <VegucateMe />
           </Route>
-          <Route path="/MyShoppingList">
-            <MyShoppingList />
+          <Route path="/ShoppingListPage">
+            <ShoppingList2 />
           </Route>
         </Switch>
       </BrowserRouter>
-      
-        </div>
+    </div>
   );
 }
 
