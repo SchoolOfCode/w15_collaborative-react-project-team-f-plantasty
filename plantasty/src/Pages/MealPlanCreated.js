@@ -1,52 +1,52 @@
-import { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import MealList from '../Components/MealList';
 import Navbar from '../Components/Header/Navbar';
 import Footer from '../Components/Footer';
-import React from 'react';
-import MiniRecipeCard from '../Components/MiniRecipeCard';
+import CaloriesInput from '../Components/CaloriesInput';
+// import { Link } from 'react-router-dom';
 
-const AlinaAPI = '11cf2295cd61422389f3a0b5611fcb30';
-const TaniaAPI = '81d1af1612cd4093abbfa7b29f39fd3e';
-const TomAPI = '5b5269dd70b849018665136bf0eb41c9';
+function MealPlanForm() {
+  const [mealData, setMealData] = useState(null);
+  const [calories, setCalories] = useState(2000);
+  //   const AlinaAPI = '11cf2295cd61422389f3a0b5611fcb30';
+  //   const TaniaAPI = '81d1af1612cd4093abbfa7b29f39fd3e';
+  //   const TomAPI = '5b5269dd70b849018665136bf0eb41c9';
+  const AlinaAPI2 = 'ef968f4556ed4b3f880221d46d7bd1b9';
 
-// URL variables
-let calories = 2000;
-let diet = 'Vegan'; // value passed on from q1 page
-let intolerances = 'Egg'; // just for test
-// let intolerances = userAllergy array passed on from Q2 page : .split?
-let URL = `https://api.spoonacular.com/mealplanner/generate?apiKey=${TaniaAPI}&timeFrame=day&targetCalories=${calories}&Diet=${diet}&intolerance=${intolerances}`;
-console.log(URL);
+  function handleChange(number) {
+    setCalories(number);
+  }
 
-function MealPlanCreated() {
-  const [mealData, setMealData] = useState([]);
-  // look up at redux reducer for possible future use
-
-  useEffect(() => {
-    fetch(`${URL}`)
+  function getMealData() {
+    fetch(
+      `https://api.spoonacular.com/mealplanner/generate?apiKey=${AlinaAPI2}&timeFrame=day&targetCalories=${calories}&Diet=Vegan`
+    )
       .then((response) => response.json())
-      .then((mealDataArray) => {
-        const meals = mealDataArray.meals; // just get the meals
-        console.log('three meals received:', meals);
-        setMealData(meals);
+      .then((data) => {
+        setMealData(data);
+        console.log(data);
+      })
+      .catch(() => {
+        console.log('error');
       });
-  }, []); // warning: leave dependency array empty. If set to mealData it will rerender MANY TIMES!!
-
-  const mealsLoaded = mealData.length > 0;
-
+  }
   return (
-    <div>
+    <div className="MealPlanCreated">
       <div>
         <Navbar />
       </div>
-      <div>
-        {mealsLoaded ? (
-          mealData.map((meal) => (
-            <MiniRecipeCard text={meal.title} key={meal.id} />
-          ))
-        ) : (
-          <h1>'loading'</h1>
-        )}
-        ;
-      </div>
+      <section className="controls">
+        <CaloriesInput handleChange={handleChange} />
+      </section>
+      <button onClick={getMealData}> Get daily plan</button>
+      {mealData && <MealList mealData={mealData} />}
+
+      {/* <div>
+        <Link to="/createPlan/q1">
+          <button type="button">Start</button>
+        </Link>
+      </div> */}
+
       <footer>
         <Footer />
       </footer>
@@ -54,15 +54,4 @@ function MealPlanCreated() {
   );
 }
 
-export default MealPlanCreated;
-
-// window.location.href = '../Question/question.html' + quizUrl;
-
-// let urlParams = new URLSearchParams(window.location.search);
-// console.log(urlParams.toString());
-
-// let quizUrl = urlParams.toString();
-// console.log(`https://opentdb.com/api.php?${quizUrl}`);
-
-// // Fetch request to the API
-// fetch(`https://opentdb.com/api.php?${quizUrl}`);
+export default MealPlanForm;
