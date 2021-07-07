@@ -20,7 +20,7 @@ function MyShoppingList () {
                     <input type="text" placeholder="Add Item..." onChange={handleInput}/>
                 </div>
                 <div className="Shopping_List_Button">
-                    <button>Add To List</button>
+                    <button>Add To Shopping List</button>
                 </div>
             </div>
             <div className="Shopping_List_List">
@@ -28,6 +28,9 @@ function MyShoppingList () {
                     <li>{inputValue}
                     </li>
                 </ul>
+            </div>
+            <div className="Shopping_List_Clear">
+                <button>Clear List</button>
             </div>
 
         </div>
