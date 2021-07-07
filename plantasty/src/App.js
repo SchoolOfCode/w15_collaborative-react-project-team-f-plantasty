@@ -3,7 +3,6 @@ import "./App.css";
 import HomePage from "./Pages/HomePage";
 import VegucateMe from "./Pages/VegucateMe";
 import MealPlanCreated from "./Pages/MealPlanCreated";
-// import ShoppingList2 from "./Components/ShoppingItems/ShoppingList2";
 import ShoppingList2 from "./Pages/ShoppingListPage";
 
 function App() {

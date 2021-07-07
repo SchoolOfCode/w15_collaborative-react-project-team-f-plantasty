@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import TodoList from "./TodoList";
+import styles from "./ShoppingList.css";
 
 function ShoppingList2() {
   const [inputValue, setInputValue] = useState("");
@@ -35,7 +36,9 @@ function ShoppingList2() {
             placeholder="Add item..."
             onChange={(e) => setInputValue(e.target.value)}
           />
-          <button onClick={handleSubmit}>Add</button>
+          <button className="shopping_add_button" onClick={handleSubmit}>
+            Add to Shopping List
+          </button>
 
           <TodoList
             items={items}
