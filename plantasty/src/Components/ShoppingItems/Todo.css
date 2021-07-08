@@ -1,7 +1,19 @@
-.isItemCompleted-done {
-    text-decoration: line-through;
-  }
+.todo_delete_button {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
 
-  .isItemCompleted {
-    text-decoration: none;
-  }
+.isItemCompleted-done {
+  text-decoration: line-through;
+}
+
+.isItemCompleted {
+  text-decoration: none;
+}

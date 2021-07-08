@@ -29,7 +29,9 @@ function Todo({ el, text, items, setItems, setInputValue }) {
       <div className="todo_item">
         <input type="checkbox" onChange={handleMarkStatus} />
         <span className={itemClass}>{text}</span>
-        <button onClick={handleDelete}>x</button>
+        <button className="todo_delete_button" onClick={handleDelete}>
+          x
+        </button>
       </div>
     </div>
   );

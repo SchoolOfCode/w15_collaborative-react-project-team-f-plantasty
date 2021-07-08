@@ -3,7 +3,7 @@ import "./App.css";
 import HomePage from "./Pages/HomePage";
 import VegucateMe from "./Pages/VegucateMe";
 import MealPlanCreated from "./Pages/MealPlanCreated";
-import ShoppingList2 from "./Pages/ShoppingListPage";
+import ShoppingListPage from "./Pages/ShoppingListPage";
 
 function App() {
   return (
@@ -19,8 +19,8 @@ function App() {
           <Route path="/vegucate">
             <VegucateMe />
           </Route>
-          <Route path="/ShoppingListPage">
-            <ShoppingList2 />
+          <Route path="/shoppingListPage">
+            <ShoppingListPage />
           </Route>
         </Switch>
       </BrowserRouter>

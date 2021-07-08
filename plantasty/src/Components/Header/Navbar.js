@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styles from './Navbar.module.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import styles from "./Navbar.module.css";
 
 function Navbar() {
   return (
@@ -17,7 +17,7 @@ function Navbar() {
             <Link to="/vegucate">Vegucate Me</Link>
           </li>
           <li>
-            <Link to="/shopping">Shopping list</Link>
+            <Link to="/shoppingListPage">Shopping List</Link>
           </li>
           <li>
             <Link to="/favourites">Favourites</Link>
