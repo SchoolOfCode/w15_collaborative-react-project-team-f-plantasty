@@ -3,6 +3,8 @@ import MealList from '../Components/MealList';
 import Navbar from '../Components/Header/Navbar';
 import Footer from '../Components/Footer';
 import CaloriesInput from '../Components/CaloriesInput';
+import styles from '../Components/FullRecipeCard/RecipeCard.module.css';
+import style from '../Components/TextButton/button.module.css';
 // import { Link } from 'react-router-dom';
 
 function MealPlanForm() {
@@ -35,10 +37,14 @@ function MealPlanForm() {
       <div>
         <Navbar />
       </div>
-      <section className="controls">
+
+      <section className={styles.recipeContainer}>
         <CaloriesInput handleChange={handleChange} />
       </section>
-      <button onClick={getMealData}> Get daily plan</button>
+
+      <button className={style.textButton} onClick={getMealData}>
+        Get Daily meal plan
+      </button>
       {mealData && <MealList mealData={mealData} />}
 
       {/* <div>
