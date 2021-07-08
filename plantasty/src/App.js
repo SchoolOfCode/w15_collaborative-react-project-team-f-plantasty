@@ -17,9 +17,8 @@ function App() {
           <Route path="/myplan">
             <MealPlanCreated />
           </Route>
-
           <Route path="/createplan" exact>
-            <CreateMealPlan/>
+            <CreateMealPlan />
           </Route>
           {/* <Route path="/createplan/q2">
             <Q2 />

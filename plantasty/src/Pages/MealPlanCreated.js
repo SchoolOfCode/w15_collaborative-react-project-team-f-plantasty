@@ -19,14 +19,17 @@ function MealPlanForm() {
     setCalories(number);
   }
 
+  const sentAllergies = 'Egg'; // want this to be from "createMealPlan page"
+  //let workingURL = `https://api.spoonacular.com/mealplanner/generate?apiKey=${AlinaAPI2}&timeFrame=day&targetCalories=${calories}&Diet=Vegan`;
+  let testURL = `https://api.spoonacular.com/mealplanner/generate?apiKey=${AlinaAPI2}&timeFrame=day&targetCalories=${calories}&Diet=Vegan&excluded=${sentAllergies}`;
+
   function getMealData() {
-    fetch(
-      `https://api.spoonacular.com/mealplanner/generate?apiKey=${AlinaAPI2}&timeFrame=day&targetCalories=${calories}&Diet=Vegan`
-    )
+    fetch(testURL)
       .then((response) => response.json())
       .then((data) => {
         setMealData(data);
         console.log(data);
+        console.log(testURL);
       })
       .catch(() => {
         console.log('error');

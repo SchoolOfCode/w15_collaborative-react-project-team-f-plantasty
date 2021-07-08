@@ -1,6 +1,7 @@
 import MultipleChoiceForm from '../Components/MultipleChoiceForm';
 import SingleChoiceForm from '../Components/SingleChoiceForm';
-
+import Navbar from '../Components/Header/Navbar';
+import Footer from '../Components/Footer';
 let intolerances = [
   'Dairy',
   'Egg',
@@ -25,6 +26,9 @@ function CreateMealPlan() {
 
   return (
     <div>
+      <nav>
+        <Navbar />
+      </nav>
       <section>
         <h1>Multiple choice form</h1>
         {intolerances.map((allergy) => (
@@ -33,12 +37,16 @@ function CreateMealPlan() {
             value={allergy}
             handleChange={handleClick}
           />
-        ))}{' '}
+        ))}
+        ;
       </section>
       <section>
         <h1>Single choice form</h1>
         <SingleChoiceForm />
       </section>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
