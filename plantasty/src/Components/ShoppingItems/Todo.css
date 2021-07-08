@@ -10,6 +10,14 @@
   display: inline-block;
 }
 
+.todo_list_container {
+  position: absolute;
+  top: 17%;
+  bottom: 0;
+  left: 0;
+  right: 40%;
+}
+
 .isItemCompleted-done {
   text-decoration: line-through;
 }

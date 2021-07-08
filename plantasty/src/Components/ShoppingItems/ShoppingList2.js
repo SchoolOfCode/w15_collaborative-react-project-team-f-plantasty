@@ -4,13 +4,15 @@ import styles from "./ShoppingList.css";
 import notepad from "./notepad.jpg";
 
 function ShoppingList2() {
+  //declared the
   const [inputValue, setInputValue] = useState("");
   const [items, setItems] = useState([]);
 
   function handleSubmit(e) {
     // stops the page from continuing
-    e.preventDefault();
+    // e.preventDefault();
     //update the state of setItems
+    console.log(inputValue);
     setItems([
       // spread operator
       ...items,
@@ -23,6 +25,7 @@ function ShoppingList2() {
       },
     ]);
     setInputValue("");
+    console.log(inputValue);
   }
 
   return (
@@ -36,7 +39,7 @@ function ShoppingList2() {
         </p>
       </div>
       <div className="shopping_input_container">
-        <div className="shopping_input_input">
+        <div id="input" className="shopping_input_input">
           <input
             type="text"
             placeholder="Add item..."
