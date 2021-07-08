@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import MealList from '../Components/MealList';
 import Navbar from '../Components/Header/Navbar';
 import Footer from '../Components/Footer';
-import styles from '../Components/FullRecipeCard/RecipeCard.module.css';
+// import styles from '../Components/FullRecipeCard/RecipeCard.module.css';
 
 import style from '../Components/TextButton/button.module.css';
 function MealPlanForm(props) {
@@ -23,7 +23,7 @@ function MealPlanForm(props) {
           setTimeout(() => {
             setMealData(data);
           }, 2000);
-        console.log(data);
+          console.log(data);
           console.log(testURL);
         })
         .catch(() => {
@@ -49,23 +49,22 @@ function MealPlanForm(props) {
 
 export default MealPlanForm;
 
-// function way 
-  // function getMealData() {
-  //   fetch(testURL)
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       setMealData(data);
-  //       console.log(data);
-  //       console.log(testURL);
-  //     })
-  //     .catch(() => {
-  //       console.log('error');
-  //     });
-  // }
+// function way
+// function getMealData() {
+//   fetch(testURL)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       setMealData(data);
+//       console.log(data);
+//       console.log(testURL);
+//     })
+//     .catch(() => {
+//       console.log('error');
+//     });
+// }
 
 /* {mealData && <MealList mealData={mealData} />} */
-  
-    // <button className={style.textButton} onClick={getMealData}>
-    //     Get Daily meal plan
-    //   </button>
 
+// <button className={style.textButton} onClick={getMealData}>
+//     Get Daily meal plan
+//   </button>
