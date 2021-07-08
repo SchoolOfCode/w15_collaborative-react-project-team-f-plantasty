@@ -7,7 +7,10 @@ function Hero() {
     <main className={styles}>
       <div>
         <h1>Welcome to Plantasty</h1>
-        <h2></h2>
+        <h2 className={styles.titleHero}>
+          Thinking of eating less meat? Start your journey with Plantasty.
+          Personalised daily meals at just one click away.
+        </h2>
       </div>
       <div>
         <img

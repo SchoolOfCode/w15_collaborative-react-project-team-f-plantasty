@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import MealList from '../Components/MealList';
 import Navbar from '../Components/Header/Navbar';
 import Footer from '../Components/Footer';
-import styles from '../Components/FullRecipeCard/RecipeCard.module.css';
+// import styles from '../Components/FullRecipeCard/RecipeCard.module.css';
+
 import style from '../Components/TextButton/button.module.css';
 import Loading from '../Components/Loading';
 function MealPlanForm(props) {
@@ -51,6 +52,7 @@ function MealPlanForm(props) {
 export default MealPlanForm;
 
 // function and button way
+// function way
 // function getMealData() {
 //   fetch(testURL)
 //     .then((response) => response.json())
