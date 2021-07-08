@@ -3,7 +3,7 @@ import './App.css';
 import HomePage from './Pages/HomePage';
 import VegucateMe from './Pages/VegucateMe';
 import MealPlanCreated from './Pages/MealPlanCreated';
-import Q1 from './Pages/Q1';
+import CreateMealPlan from './Pages/CreateMealPlan';
 import Q2 from './Pages/Q2';
 
 function App() {
@@ -17,15 +17,13 @@ function App() {
           <Route path="/myplan">
             <MealPlanCreated />
           </Route>
-          {/* <Route path="/createplan" exact>
-            <MealPlanForm />
-          </Route> */}
+
           <Route path="/createplan" exact>
-            <Q1 />
+            <CreateMealPlan/>
           </Route>
-          <Route path="/createplan/q2">
+          {/* <Route path="/createplan/q2">
             <Q2 />
-          </Route>
+          </Route> */}
           <Route path="/vegucate">
             <VegucateMe />
           </Route>

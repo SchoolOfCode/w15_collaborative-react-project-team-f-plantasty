@@ -1,3 +1,50 @@
+import MultipleChoiceForm from '../Components/MultipleChoiceForm';
+import SingleChoiceForm from '../Components/SingleChoiceForm';
+
+let intolerances = [
+  'Dairy',
+  'Egg',
+  'Gluten',
+  'Grain',
+  'Peanut',
+  'Seafood',
+  'Sesame',
+  'Shellfish',
+  'Soy',
+  'Sulfite',
+  'Tree Nut',
+  'Wheat',
+];
+
+function CreateMealPlan() {
+  let userAllergy = [];
+  function handleClick(event) {
+    userAllergy.push(event); // add selected allergy to user array to use later
+    console.log(userAllergy);
+  }
+
+  return (
+    <div>
+      <section>
+        <h1>Multiple choice form</h1>
+        {intolerances.map((allergy) => (
+          <MultipleChoiceForm
+            text={allergy}
+            value={allergy}
+            handleChange={handleClick}
+          />
+        ))}{' '}
+      </section>
+      <section>
+        <h1>Single choice form</h1>
+        <SingleChoiceForm />
+      </section>
+    </div>
+  );
+}
+
+export default CreateMealPlan;
+
 // import { useState, useEffect } from 'react';
 // import Navbar from '../Components/Header/Navbar';
 // import Footer from '../Components/Footer';
