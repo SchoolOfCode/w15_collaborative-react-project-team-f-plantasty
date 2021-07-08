@@ -23,6 +23,7 @@
 
 .header li {
   margin-left: 3rem;
+  white-space: nowrap;
 }
 
 .header a {
