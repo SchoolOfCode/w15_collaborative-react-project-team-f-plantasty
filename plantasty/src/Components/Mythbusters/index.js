@@ -1,11 +1,12 @@
 import React from 'react';
+import images from '../../img';
 
 export default function Mythbusters() {
   return (
     <div class="row row-cols-1 row-cols-md-2 g-4">
       <div class="col">
         <div class="card">
-          <img src="..." class="card-img-top" alt="..." />
+          <img src={images.a} class="card-img-top" alt="salad" />
           <div class="card-body">
             <h5 class="card-title">Myth: Veganism is too expensive.</h5>
             <p class="card-text">
@@ -25,7 +26,7 @@ export default function Mythbusters() {
       </div>
       <div class="col">
         <div class="card">
-          <img src="..." class="card-img-top" alt="..." />
+          <img src={images.b} class="card-img-top" alt="protein" />
           <div class="card-body">
             <h5 class="card-title">Myth: Vegans don’t get enough protein.</h5>
             <p class="card-text">
@@ -45,7 +46,7 @@ export default function Mythbusters() {
       </div>
       <div class="col">
         <div class="card">
-          <img src="..." class="card-img-top" alt="..." />
+          <img src={images.c} class="card-img-top" alt="planet" />
           <div class="card-body">
             <h5 class="card-title">
               Myth: Being vegan isn't going to save the world.
@@ -69,7 +70,7 @@ export default function Mythbusters() {
       </div>
       <div class="col">
         <div class="card">
-          <img src="..." class="card-img-top" alt="..." />
+          <img src={images.d} class="card-img-top" alt="cooking" />
           <div class="card-body">
             <h5 class="card-title">Myth: Going Vegan can make you weak</h5>
             <p class="card-text">
