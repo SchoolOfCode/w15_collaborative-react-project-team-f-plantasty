@@ -15,18 +15,23 @@ function MealPlanForm(props) {
 
   let testURL = `https://api.spoonacular.com/mealplanner/generate?apiKey=${TomAPI}&timeFrame=day&targetCalories=${props.calorie}&Diet=Vegan&excluded=${props.allergy[0]}`;
 
-  function getMealData() {
-    fetch(testURL)
-      .then((response) => response.json())
-      .then((data) => {
-        setMealData(data);
+  useEffect(() => {
+    function getMealData() {
+      fetch(testURL)
+        .then((response) => response.json())
+        .then((data) => {
+          setTimeout(() => {
+            setMealData(data);
+          }, 2000);
         console.log(data);
-        console.log(testURL);
-      })
-      .catch(() => {
-        console.log('error');
-      });
-  }
+          console.log(testURL);
+        })
+        .catch(() => {
+          console.log('error');
+        });
+    }
+    getMealData();
+  }, [testURL]);
 
   return (
     <div className="MealPlanCreated">
@@ -35,9 +40,6 @@ function MealPlanForm(props) {
       </div>
       {mealData != null ? <MealList mealData={mealData} /> : <h1>LOADING</h1>}
 
-      <button className={style.textButton} onClick={getMealData}>
-        Get Daily meal plan
-      </button>
       <footer>
         <Footer />
       </footer>
@@ -47,22 +49,23 @@ function MealPlanForm(props) {
 
 export default MealPlanForm;
 
-// Don't delete please //
-// useEffect(() => {
-//   function getMealData() {
-//     fetch(testURL)
-//       .then((response) => response.json())
-//       .then((data) => {
-//         setMealData(data);
-//         console.log(data);
-//         console.log(testURL);
-//       })
-//       .catch(() => {
-//         console.log('error');
-//       });
-//   }
-//   getMealData();
-// }, [testURL]);
-{
-  /* {mealData && <MealList mealData={mealData} />} */
-}
+// function way 
+  // function getMealData() {
+  //   fetch(testURL)
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setMealData(data);
+  //       console.log(data);
+  //       console.log(testURL);
+  //     })
+  //     .catch(() => {
+  //       console.log('error');
+  //     });
+  // }
+
+/* {mealData && <MealList mealData={mealData} />} */
+  
+    // <button className={style.textButton} onClick={getMealData}>
+    //     Get Daily meal plan
+    //   </button>
+
