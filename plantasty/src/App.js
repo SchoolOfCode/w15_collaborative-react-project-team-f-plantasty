@@ -1,5 +1,6 @@
 import { Route, BrowserRouter, Switch } from 'react-router-dom'; // define different paths in URL and which component should be loaded
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './Pages/HomePage';
 import VegucateMe from './Pages/VegucateMe';
 import MealPlanCreated from './Pages/MealPlanCreated';

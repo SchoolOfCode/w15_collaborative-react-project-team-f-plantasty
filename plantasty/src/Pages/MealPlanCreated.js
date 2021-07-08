@@ -44,10 +44,11 @@ function MealPlanForm() {
       <section className={styles.recipeContainer}>
         <CaloriesInput handleChange={handleChange} />
       </section>
-
-      <button className={style.textButton} onClick={getMealData}>
-        Get Daily meal plan
-      </button>
+      <div className={style.buttonContainer}>
+        <button className={style.textButton} onClick={getMealData}>
+          Get Daily meal plan
+        </button>
+      </div>
       {mealData && <MealList mealData={mealData} />}
 
       {/* <div>
