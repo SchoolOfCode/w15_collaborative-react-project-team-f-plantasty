@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import styles from './MultipleChoiceForm.module.css';
+// import styles from './MultipleChoiceForm.module.css';
+import style from '../TextButton/button.module.css';
 
 function MultipleChoiceForm(props) {
-
   return (
     <button
-      className={styles.cardWrapper}
+      className={style.textButton}
       value={props.value}
       onClick={(event) => props.getValue(event.target.value)}
     >

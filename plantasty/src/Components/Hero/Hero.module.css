@@ -18,3 +18,8 @@ h1 {
   width: 100%;
   height: auto;
 }
+
+.titleHero {
+  display: block;
+  margin-top: 50px;
+}
