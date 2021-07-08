@@ -1,7 +1,3 @@
-ul {
-  list-style-type: none;
-}
-
 .nutrientsContainer {
   display: flex;
   flex-direction: column;
@@ -15,4 +11,19 @@ ul {
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
   padding: 10px;
   margin: 30px;
+  list-style-type: none;
+}
+
+.nutrientList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.listItem {
+  border-radius: 50%;
+  background: #4ebd6e;
+  margin: 50px;
+  padding: 20px;
+  border-style: 2px solid black;
 }

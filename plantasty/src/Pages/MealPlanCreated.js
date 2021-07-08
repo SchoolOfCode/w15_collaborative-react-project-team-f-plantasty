@@ -48,7 +48,6 @@ function MealPlanForm(props) {
 export default MealPlanForm;
 
 // Don't delete please //
-
 // useEffect(() => {
 //   function getMealData() {
 //     fetch(testURL)
