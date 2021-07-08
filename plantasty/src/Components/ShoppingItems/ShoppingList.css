@@ -4,61 +4,34 @@ body {
 }
 
 .shopping_title {
-  font-size: 30px;
+  font-size: 25px;
   color: green;
 }
 
-#header {
+.shopping_header {
   padding: 0px 80px 5px 80px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
-.notepad {
+.shopping_notepad {
   position: relative;
   text-align: center;
+  padding: 5px 10px 5px 10px;
 }
 
 .shopping_input_input {
-  border: 3px solid red;
   list-style-type: none;
   width: 50%;
   margin: auto;
   font-size: 20px;
 }
 
-#imageNotepad {
-  padding: 5px 10px 5px 10px;
-  max-width: 60%;
-  height: 60%;
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.in-basket {
-  color: blue;
-}
-
 .shopping_add_button {
   background-color: green;
   border: none;
   color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-
-#clearList {
-  background-color: blue;
-  border: none;
-  color: white;
-  padding: 15px 32px;
+  padding: 10px 20px;
+  margin-left: 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TodoList from "./TodoList";
 import styles from "./ShoppingList.css";
+import notepad from "./notepad.jpg";
 
 function ShoppingList2() {
   const [inputValue, setInputValue] = useState("");
@@ -28,6 +29,11 @@ function ShoppingList2() {
     <div className="shopping_container">
       <div className="shopping_title">
         <h1>My Shopping List</h1>
+        <p className="shopping_header">
+          Going to the store to shop can be a tedious task, especially if you
+          forget to buy some of the items you need. Fortunately, you can easily
+          avoid this by making a shopping list using our app.
+        </p>
       </div>
       <div className="shopping_input_container">
         <div className="shopping_input_input">
@@ -39,7 +45,11 @@ function ShoppingList2() {
           <button className="shopping_add_button" onClick={handleSubmit}>
             Add to Shopping List
           </button>
-
+          <img
+            className="shopping_notepad"
+            src={notepad}
+            alt="notepad and pen"
+          />
           <TodoList
             items={items}
             setItems={setItems}
