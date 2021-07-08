@@ -7,7 +7,7 @@ function MultipleChoiceForm(props) {
     <button
       className={styles.cardWrapper}
       value={props.value}
-      onClick={(event) => props.handleChange(event.target.value)}
+      onClick={(event) => props.getValue(event.target.value)}
     >
       {props.text}
     </button>

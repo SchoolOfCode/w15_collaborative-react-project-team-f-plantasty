@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-function SingleChoiceForm() {
+function SingleChoiceForm(props) {
   return (
     <section>
       <div>
-        <h1>Welcome to the weekly meal planner</h1>
-        <h2>Select your preferences bellow</h2>
+        <h1>{props.text}</h1>
+        <h2>{props.text}</h2>
       </div>
       <div></div>
     </section>
@@ -13,3 +13,4 @@ function SingleChoiceForm() {
 }
 
 export default SingleChoiceForm;
+
