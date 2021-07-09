@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-// import styles from './MultipleChoiceForm.module.css';
 import style from '../TextButton/button.module.css';
 
 function MultipleChoiceForm(props) {
