@@ -1,47 +1,47 @@
-import { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import MealList from '../Components/MealList';
 import Navbar from '../Components/Header/Navbar';
 import Footer from '../Components/Footer';
-import React from 'react';
-import MiniRecipeCard from '../Components/MiniRecipeCard';
+// import styles from '../Components/FullRecipeCard/RecipeCard.module.css';
 
-const AlinaAPI =
-  'https://api.spoonacular.com/mealplanner/generate?apiKey=11cf2295cd61422389f3a0b5611fcb30&timeFrame=day&targetCalories=2000&Diet=Vegan';
-const TaniaAPI =
-  'https://api.spoonacular.com/mealplanner/generate?apiKey=11cf2295cd61422389f3a0b5611fcb30&timeFrame=day&targetCalories=2000&Diet=Vegan';
-const TomAPI =
-  'https://api.spoonacular.com/mealplanner/generate?apiKey=5b5269dd70b849018665136bf0eb41c9&timeFrame=day&targetCalories=2000&Diet=Vegan';
+import style from '../Components/TextButton/button.module.css';
+import Loading from '../Components/Loading';
+function MealPlanForm(props) {
+  const [mealData, setMealData] = useState(null);
 
-function MealPlanCreated() {
-  const [mealData, setMealData] = useState([]);
-  // look up at redux reducer for possible future use
+  //   const AlinaAPI = '11cf2295cd61422389f3a0b5611fcb30';
+  //   const TaniaAPI = '81d1af1612cd4093abbfa7b29f39fd3e';
+  const TomAPI = '5b5269dd70b849018665136bf0eb41c9';
+  //const AlinaAPI2 = 'ef968f4556ed4b3f880221d46d7bd1b9';
+
+  let testURL = `https://api.spoonacular.com/mealplanner/generate?apiKey=${TomAPI}&timeFrame=day&targetCalories=${props.calorie}&Diet=Vegan&excluded=${props.allergy[0]}`;
 
   useEffect(() => {
-    fetch(`${TomAPI}`)
-      .then((response) => response.json())
-      .then((mealDataArray) => {
-        const meals = mealDataArray.meals; // just get the meals// push to current meals if current meals is empty
-        console.log('three meals received:', meals);
-        setMealData(meals);
-      });
-  }, []); // warning: leave dependency array empty. If set to mealData it will rerender MANY TIMES!!
-
-  const mealsLoaded = mealData.length > 0;
+    function getMealData() {
+      fetch(testURL)
+        .then((response) => response.json())
+        .then((data) => {
+          setTimeout(() => {
+            setMealData(data);
+          }, 2000);
+          console.log(data);
+          console.log(testURL);
+        })
+        .catch(() => {
+          console.log('error');
+        });
+    }
+    getMealData();
+  }, [testURL]);
 
   return (
-    <div>
+    <div className="MealPlanCreated">
       <div>
         <Navbar />
       </div>
-      <div>
-        {mealsLoaded ? (
-          mealData.map((meal) => (
-            <MiniRecipeCard text={meal.title} key={meal.id} />
-          ))
-        ) : (
-          <h1>'loading'</h1>
-        )}
-        ;
-      </div>
+
+      {mealData != null ? <MealList mealData={mealData} /> : <Loading />}
+
       <footer>
         <Footer />
       </footer>
@@ -49,4 +49,25 @@ function MealPlanCreated() {
   );
 }
 
-export default MealPlanCreated;
+export default MealPlanForm;
+
+// function and button way
+// function way
+// function getMealData() {
+//   fetch(testURL)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       setMealData(data);
+//       console.log(data);
+//       console.log(testURL);
+//     })
+//     .catch(() => {
+//       console.log('error');
+//     });
+// }
+
+/* {mealData && <MealList mealData={mealData} />} */
+
+// <button className={style.textButton} onClick={getMealData}>
+//     Get Daily meal plan
+//   </button>

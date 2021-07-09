@@ -1,0 +1,29 @@
+.nutrientsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: #fff;
+  padding: 20px 20px 0 20px;
+  border: solid 2px #00120b;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  margin: 30px;
+  list-style-type: none;
+}
+
+.nutrientList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.listItem {
+  border-radius: 50%;
+  background: #4ebd6e;
+  margin: 50px;
+  padding: 20px;
+  border-style: 2px solid black;
+}
