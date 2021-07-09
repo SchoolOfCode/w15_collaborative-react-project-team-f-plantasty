@@ -39,14 +39,15 @@ function CreateMealPlan(props) {
         <h1>What is your calorie target for the day?</h1>
         <h2>Use input to type in your desires calorie intake</h2>
         <CaloriesInput handleChange={props.updateCalories} />
-
+      </section>
+      <section>
         <Link to={'/myplan'}>
           <TextButton text={'Generate plan'} />
         </Link>
       </section>
-      <section>
+      {/* <section>
         <SingleChoiceForm />
-      </section>
+      </section> */}
     </div>
   );
 }
