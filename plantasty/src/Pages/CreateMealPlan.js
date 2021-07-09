@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 import MultipleChoiceForm from '../Components/MultipleChoiceForm';
 import SingleChoiceForm from '../Components/SingleChoiceForm';
-import Navbar from '../Components/Header/Navbar';
-import Footer from '../Components/Footer';
 import CaloriesInput from '../Components/CaloriesInput';
 import TextButton from '../Components/TextButton';
 import styles from '../Components/MultipleChoiceForm/MultipleChoiceForm.module.css';
@@ -25,9 +23,6 @@ let intolerances = [
 function CreateMealPlan(props) {
   return (
     <div>
-      <nav>
-        <Navbar />
-      </nav>
       <section className={styles.cardWrap2}>
         <h1>Do you have any of the following food intolerances?</h1>
         <h2>Select all that apply</h2>
@@ -52,9 +47,6 @@ function CreateMealPlan(props) {
       <section>
         <SingleChoiceForm />
       </section>
-      <footer>
-        <Footer />
-      </footer>
     </div>
   );
 }

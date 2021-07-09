@@ -13,9 +13,6 @@ function VegucateMe() {
   return (
     <div>
       <div>
-        <Navbar />
-      </div>
-      <div>
         <Mythbusters />
       </div>
       <div className={styles.cardContainer}>
@@ -45,9 +42,6 @@ function VegucateMe() {
           src={omega}
         />
       </div>
-      <footer>
-        <Footer />
-      </footer>
     </div>
   );
 }

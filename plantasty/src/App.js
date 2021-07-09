@@ -2,11 +2,15 @@ import { Route, BrowserRouter, Switch } from 'react-router-dom'; // define diffe
 import { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './Components/Header/Navbar';
+import Footer from './Components/Footer';
 import HomePage from './Pages/HomePage';
 import VegucateMe from './Pages/VegucateMe';
 import MealPlanCreated from './Pages/MealPlanCreated';
 import CreateMealPlan from './Pages/CreateMealPlan';
 import ShoppingListPage from './Pages/ShoppingListPage';
+
+
 
 function App() {
   const [allergies, setAllergies] = useState([]);
@@ -25,6 +29,9 @@ function App() {
   return (
     <div>
       <BrowserRouter>
+        <nav>
+          <Navbar />
+        </nav>
         <Switch>
           <Route path="/" exact>
             <HomePage />
@@ -48,6 +55,9 @@ function App() {
             <ShoppingListPage />
           </Route>
         </Switch>
+        <footer>
+        <Footer />
+      </footer>
       </BrowserRouter>
     </div>
   );

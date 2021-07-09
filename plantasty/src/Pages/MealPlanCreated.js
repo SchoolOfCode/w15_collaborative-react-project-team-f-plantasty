@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import MealList from '../Components/MealList';
-import Navbar from '../Components/Header/Navbar';
-import Footer from '../Components/Footer';
 // import styles from '../Components/FullRecipeCard/RecipeCard.module.css';
 
 import style from '../Components/TextButton/button.module.css';
@@ -36,15 +34,7 @@ function MealPlanForm(props) {
 
   return (
     <div className="MealPlanCreated">
-      <div>
-        <Navbar />
-      </div>
-
       {mealData != null ? <MealList mealData={mealData} /> : <Loading />}
-
-      <footer>
-        <Footer />
-      </footer>
     </div>
   );
 }
