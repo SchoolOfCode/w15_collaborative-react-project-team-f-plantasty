@@ -44,6 +44,7 @@ function ShoppingList2() {
             type="text"
             placeholder="Add item..."
             onChange={(e) => setInputValue(e.target.value)}
+            value={inputValue}
           />
           <button className="shopping_add_button" onClick={handleSubmit}>
             Add to Shopping List
