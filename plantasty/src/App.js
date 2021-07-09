@@ -6,7 +6,7 @@ import HomePage from './Pages/HomePage';
 import VegucateMe from './Pages/VegucateMe';
 import MealPlanCreated from './Pages/MealPlanCreated';
 import CreateMealPlan from './Pages/CreateMealPlan';
-import Q2 from './Pages/Q2';
+import ShoppingListPage from './Pages/ShoppingListPage';
 
 function App() {
   const [allergies, setAllergies] = useState([]);
@@ -43,6 +43,9 @@ function App() {
           </Route> */}
           <Route path="/vegucate">
             <VegucateMe />
+          </Route>
+          <Route path="/shoppingListPage">
+            <ShoppingListPage />
           </Route>
         </Switch>
       </BrowserRouter>
