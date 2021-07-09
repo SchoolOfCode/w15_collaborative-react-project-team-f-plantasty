@@ -11,6 +11,13 @@ main {
 h1 {
   color: #058c42;
 }
+
+img {
+  width: 500px;
+  height: 400 px;
+  padding: 10px;
+}
+
 .imgHero {
   /* width: 500px;
   height: 400 px;

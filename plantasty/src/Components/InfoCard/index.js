@@ -11,10 +11,11 @@ function InfoCard(props) {
         />
       </div>
       <div>
-        <h2>{props.text}</h2>
+        <h1>{props.title}</h1>
         <h3>{props.text}</h3>
         <button>{props.button}</button>
       </div>
+      ;
     </section>
   );
 }
