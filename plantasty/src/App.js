@@ -13,7 +13,7 @@ import ShoppingListPage from './Pages/ShoppingListPage';
 function App() {
   const [allergies, setAllergies] = useState([]);
   const [calories, setCalories] = useState(2000);
-  const [diets, setDiets] = useState([]);
+  const [diets, setDiets] = useState('');
 
   function getAllergy(allergy) {
     setAllergies([...allergies, allergy]);
@@ -26,8 +26,10 @@ function App() {
   console.log(calories);
 
   function getDiet(diet) {
-    setDiets([...diets, diet]);
+    setDiets(diet);
   }
+
+  console.log(diets);
 
   return (
     <div>

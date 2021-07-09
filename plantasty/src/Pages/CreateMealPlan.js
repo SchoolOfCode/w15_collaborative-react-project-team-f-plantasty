@@ -6,26 +6,26 @@ import TextButton from '../Components/TextButton';
 import styles from '../Components/MultipleChoiceForm/MultipleChoiceForm.module.css';
 import style from '../Components/FullRecipeCard/RecipeCard.module.css';
 let intolerances = [
-  'Dairy',
-  'Egg',
-  'Gluten',
-  'Grain',
-  'Peanut',
-  'Seafood',
-  'Sesame',
-  'Shellfish',
-  'Soy',
-  'Sulfite',
-  'Tree Nut',
-  'Wheat',
+  'dairy',
+  'egg',
+  'gluten',
+  'grain',
+  'peanut',
+  'seafood',
+  'sesame',
+  'shellfish',
+  'soy',
+  'sulfite',
+  'sree Nut',
+  'wheat',
 ];
 
 let diet = [
-  'Vegan',
-  'Vegetarian',
-  'Lacto-Vegetarian',
-  'Ovo-Vegetarian',
-  'Pescetarian',
+  'vegan',
+  'vegetarian',
+  'lacto-vegetarian',
+  'ovo-vegetarian',
+  'pescetarian',
 ];
 
 function CreateMealPlan(props) {
