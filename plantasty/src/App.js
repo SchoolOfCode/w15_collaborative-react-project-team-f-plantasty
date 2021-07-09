@@ -10,11 +10,10 @@ import MealPlanCreated from './Pages/MealPlanCreated';
 import CreateMealPlan from './Pages/CreateMealPlan';
 import ShoppingListPage from './Pages/ShoppingListPage';
 
-
-
 function App() {
   const [allergies, setAllergies] = useState([]);
   const [calories, setCalories] = useState(2000);
+  const [diets, setDiets] = useState([]);
 
   function getAllergy(allergy) {
     setAllergies([...allergies, allergy]);
@@ -25,6 +24,10 @@ function App() {
     setCalories(number);
   }
   console.log(calories);
+
+  function getDiet(diet) {
+    setDiets([...diets, diet]);
+  }
 
   return (
     <div>
@@ -37,10 +40,15 @@ function App() {
             <HomePage />
           </Route>
           <Route path="/myplan">
-            <MealPlanCreated allergy={allergies} calorie={calories} />
+            <MealPlanCreated
+              allergy={allergies}
+              calorie={calories}
+              diet={diets}
+            />
           </Route>
           <Route path="/createplan" exact>
             <CreateMealPlan
+              updateDiet={getDiet}
               updateAllergy={getAllergy}
               updateCalories={getCalories}
             />
@@ -56,8 +64,8 @@ function App() {
           </Route>
         </Switch>
         <footer>
-        <Footer />
-      </footer>
+          <Footer />
+        </footer>
       </BrowserRouter>
     </div>
   );

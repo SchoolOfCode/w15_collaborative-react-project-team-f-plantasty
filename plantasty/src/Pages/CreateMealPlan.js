@@ -20,9 +20,29 @@ let intolerances = [
   'Wheat',
 ];
 
+let diet = [
+  'Vegan',
+  'Vegetarian',
+  'Lacto-Vegetarian',
+  'Ovo-Vegetarian',
+  'Pescetarian',
+];
+
 function CreateMealPlan(props) {
   return (
     <div>
+      <section className={styles.cardWrap2}>
+        <h1>What is your dietary preference?</h1>
+        <h2>Select the one that applys</h2>
+        {diet.map((diet, index) => (
+          <SingleChoiceForm
+            text={diet}
+            value={diet}
+            getValue={props.updateDiet}
+            key={index}
+          />
+        ))}
+      </section>
       <section className={styles.cardWrap2}>
         <h1>Do you have any of the following food intolerances?</h1>
         <h2>Select all that apply</h2>

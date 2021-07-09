@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import MealList from '../Components/MealList';
 // import styles from '../Components/FullRecipeCard/RecipeCard.module.css';
 
-import style from '../Components/TextButton/button.module.css';
+// import style from '../Components/TextButton/button.module.css';
 import Loading from '../Components/Loading';
 function MealPlanForm(props) {
   const [mealData, setMealData] = useState(null);
@@ -12,7 +12,7 @@ function MealPlanForm(props) {
   const TomAPI = '5b5269dd70b849018665136bf0eb41c9';
   //const AlinaAPI2 = 'ef968f4556ed4b3f880221d46d7bd1b9';
 
-  let testURL = `https://api.spoonacular.com/mealplanner/generate?apiKey=${TomAPI}&timeFrame=day&targetCalories=${props.calorie}&Diet=Vegan&excluded=${props.allergy[0]}`;
+  let testURL = `https://api.spoonacular.com/mealplanner/generate?apiKey=${TomAPI}&timeFrame=day&targetCalories=${props.calorie}&Diet=${props.diet[0]}&excluded=${props.allergy[0]}`;
 
   useEffect(() => {
     function getMealData() {

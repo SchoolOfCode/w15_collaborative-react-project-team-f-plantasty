@@ -18,7 +18,6 @@ let intolerances = [
 ];
 
 function Q2() {
-  
   let userAllergy = [];
   function handleClick(event) {
     userAllergy.push(event); // add selected allergy to user array to use later
