@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from '../Components/FullRecipeCard/RecipeCard.module.css';
 import MealList from '../Components/MealList';
 import Loading from '../Components/Loading';
-import FullRecipeCard from '../Components/FullRecipeCard';
+import FavouriteRecipeCard from '../Components/FavouriteRecipeCard';
 
 function Favourites() {
   const [isLoading, setIsloading] = useState(true);
@@ -44,7 +44,7 @@ function Favourites() {
 
       {loadedRecipes != null ? (
         loadedRecipes.map((meal) => {
-          return <FullRecipeCard key={meal.id} meal={meal} />;
+          return <FavouriteRecipeCard key={meal.id} meal={meal} />;
         })
       ) : (
         <h1>No data saved to firebase</h1>

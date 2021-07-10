@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import styles from './RecipeCard.module.css';
+import styles from '../FullRecipeCard/RecipeCard.module.css';
 import FavouritesButton from '../FavouritesButton';
 
-export default function FullRecipeCard({ meal }) {
+export default function FavouriteRecipeCard({ meal }) {
   const [imageUrl, setImageUrl] = useState('');
   const AlinaAPI = '11cf2295cd61422389f3a0b5611fcb30';
   //   const TaniaAPI = '81d1af1612cd4093abbfa7b29f39fd3e';
@@ -67,8 +67,8 @@ export default function FullRecipeCard({ meal }) {
           </div>
           <div>
             <FavouritesButton
-              text={'Add to favourites'}
-              handleClick={saveToFirebase}
+              text={'Remove from favourites'}
+              saveData={saveToFirebase}
             />
           </div>
         </div>
