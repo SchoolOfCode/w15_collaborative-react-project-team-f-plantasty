@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import TodoList from './TodoList';
-// import styles from "./ShoppingList.css";
+import './ShoppingList.css';
 import notepad from './notepad.jpg';
 
 function ShoppingList2() {
