@@ -18,3 +18,37 @@ img {
   width: 50%;
   height: auto;
 }
+
+.ulRecipe {
+  list-style-type: none;
+  margin-right: 50px;
+}
+
+.infoRecipe {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+}
+
+.linkButton {
+  border: solid 2px #d1d1d1;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 1rem;
+  background-color: #4ebd6e;
+  color: white;
+  text-decoration: none;
+  width: fit-content;
+  margin-top: 50px;
+}
+
+.linkButton:hover {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+  background-color: #058c42;
+  cursor: pointer;
+}
+
+.buttoncontainer {
+  display: flex;
+  flex-direction: row;
+}

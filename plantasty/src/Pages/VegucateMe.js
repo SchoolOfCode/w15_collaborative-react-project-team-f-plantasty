@@ -1,7 +1,7 @@
 // three components for one page?:
 import React from 'react';
-import Navbar from '../Components/Header/Navbar';
-import Footer from '../Components/Footer';
+// import Navbar from '../Components/Header/Navbar';
+// import Footer from '../Components/Footer';
 import VegucateMeCard from '../Components/VegucateMeCard';
 import styles from '../Components/VegucateMeCard/vegucateme.module.css';
 import Mythbusters from '../Components/Mythbusters';

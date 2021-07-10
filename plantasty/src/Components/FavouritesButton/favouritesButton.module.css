@@ -1,0 +1,15 @@
+.favouritesButton {
+  border: solid 2px #fe4a49;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 1rem;
+  background-color: white;
+  text-decoration: none;
+  width: fit-content;
+  margin-top: 10px;
+  color: #fe4a49;
+}
+
+.favouritesButton:hover {
+  background-color: #fe4a49;
+}

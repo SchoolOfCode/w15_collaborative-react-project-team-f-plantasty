@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import TodoList from "./TodoList";
-import styles from "./ShoppingList.css";
-import notepad from "./notepad.jpg";
+import React, { useState } from 'react';
+import TodoList from './TodoList';
+// import styles from "./ShoppingList.css";
+import notepad from './notepad.jpg';
 
 function ShoppingList2() {
   //declared the
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState('');
   const [items, setItems] = useState([]);
 
   function handleSubmit(e) {
@@ -24,7 +24,7 @@ function ShoppingList2() {
         id: Math.random() * 1000,
       },
     ]);
-    setInputValue("");
+    setInputValue('');
     console.log(inputValue);
   }
 
