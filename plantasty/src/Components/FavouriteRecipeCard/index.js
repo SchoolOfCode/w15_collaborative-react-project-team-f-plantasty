@@ -24,6 +24,7 @@ export default function FavouriteRecipeCard({ meal }) {
   }, [meal.id]);
 
   function deleteFromFirebase() {
+    console.log('Firebase data fake deleted');
     //delete from firebase
   }
 
