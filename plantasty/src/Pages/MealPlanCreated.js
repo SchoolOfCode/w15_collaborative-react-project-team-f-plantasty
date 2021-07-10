@@ -2,9 +2,6 @@ import React, { useEffect, useState } from 'react';
 import MealList from '../Components/MealList';
 import Calendar from '../Components/Calendar';
 import Broccoli from '../Components/Broccoli';
-// import styles from '../Components/FullRecipeCard/RecipeCard.module.css';
-
-// import style from '../Components/TextButton/button.module.css';
 import Loading from '../Components/Loading';
 
 let days = [

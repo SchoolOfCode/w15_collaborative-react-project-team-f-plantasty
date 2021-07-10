@@ -58,9 +58,7 @@ function App() {
               updateCalories={getCalories}
             />
           </Route>
-          {/* <Route path="/createplan/q2">
-            <Q2 />
-          </Route> */}
+
           <Route path="/favourites">
             <Favourites />
           </Route>

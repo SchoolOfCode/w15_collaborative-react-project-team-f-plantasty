@@ -33,7 +33,7 @@ function CreateMealPlan(props) {
     <div>
       <section className={styles.cardWrap2}>
         <h1>What is your dietary preference?</h1>
-        <h2>Select the one that applys</h2>
+        <h2>Select the one that applies</h2>
         {diet.map((diet, index) => (
           <SingleChoiceForm
             text={diet}
@@ -65,59 +65,8 @@ function CreateMealPlan(props) {
           <TextButton text={'Generate plan'} />
         </Link>
       </section>
-      {/* <section>
-        <SingleChoiceForm />
-      </section> */}
     </div>
   );
 }
 
 export default CreateMealPlan;
-
-// import { useState, useEffect } from 'react';
-// import Navbar from '../Components/Header/Navbar';
-// import Footer from '../Components/Footer';
-// import React from 'react';
-// import MiniRecipeCard from '../Components/MiniRecipeCard';
-
-// // URL variables
-
-// function MealPlanCreated() {
-//   const [mealData, setMealData] = useState([]);
-//   // look up at redux reducer for possible future use
-
-//   useEffect(() => {
-//     fetch(`${URL}`)
-//       .then((response) => response.json())
-//       .then((mealDataArray) => {
-//         const meals = mealDataArray.meals; // just get the meals
-//         console.log('three meals received:', meals);
-//         setMealData(meals);
-//       });
-//   }, []); // warning: leave dependency array empty. If set to mealData it will rerender MANY TIMES!!
-
-//   const mealsLoaded = mealData.length > 0;
-
-//   return (
-//     <div>
-//       <div>
-//         <Navbar />
-//       </div>
-//       <div>
-//         {mealsLoaded ? (
-//           mealData.map((meal) => (
-//             <MiniRecipeCard text={meal.title} key={meal.id} />
-//           ))
-//         ) : (
-//           <h1>'loading'</h1>
-//         )}
-//         ;
-//       </div>
-//       <footer>
-//         <Footer />
-//       </footer>
-//     </div>
-//   );
-// }
-
-// export default MealPlanCreated;

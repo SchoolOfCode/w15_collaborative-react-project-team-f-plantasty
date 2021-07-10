@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../Components/FullRecipeCard/RecipeCard.module.css';
-import MealList from '../Components/MealList';
-import Loading from '../Components/Loading';
 import FavouriteRecipeCard from '../Components/FavouriteRecipeCard';
 
 function Favourites() {
