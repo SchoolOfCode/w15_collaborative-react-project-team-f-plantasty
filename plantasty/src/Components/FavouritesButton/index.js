@@ -1,10 +1,12 @@
 import React from 'react';
 import styles from './favouritesButton.module.css';
 
-export default function FavouritesButton() {
+export default function FavouritesButton(props) {
   return (
     <div>
-      <button className={styles.favouritesButton}>
+      <button
+        onClick={props.saveData}
+        className={styles.favouritesButton}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"

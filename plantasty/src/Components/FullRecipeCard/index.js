@@ -26,6 +26,31 @@ export default function FullRecipeCard({ meal }) {
       });
   }, [meal.id]);
 
+  function saveToFirebase() {
+    // what you want saved to firebase
+    const mealData = {
+      title: meal.title,
+      image: imageUrl, // not sure about this
+      preparation: meal.readyInMinutes,
+      servings: meal.servings,
+      recipeLink: meal.sourceUrl,
+      id: meal.id,
+    };
+
+    fetch(
+      'https://plantasty-53521-default-rtdb.europe-west1.firebasedatabase.app/favourites.json',
+      {
+        method: 'POST',
+        body: JSON.stringify(mealData),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+    console.log('mealData saved to firebase');
+    console.log(mealData);
+  }
+
   return (
     <div className={styles.recipeContainer}>
       <h1>{meal.title}</h1>
@@ -44,7 +69,7 @@ export default function FullRecipeCard({ meal }) {
             </a>
           </div>
           <div>
-            <FavouritesButton />
+            <FavouritesButton saveData={saveToFirebase} />
           </div>
         </div>
       </div>

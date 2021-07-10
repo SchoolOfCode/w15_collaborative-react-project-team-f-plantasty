@@ -22,16 +22,16 @@ function MealPlanForm(props) {
 
   //   const AlinaAPI = '11cf2295cd61422389f3a0b5611fcb30';
   //   const TaniaAPI = '81d1af1612cd4093abbfa7b29f39fd3e';
-  const TomAPI = '5b5269dd70b849018665136bf0eb41c9';
-  //const AlinaAPI2 = 'ef968f4556ed4b3f880221d46d7bd1b9';
-  // const MaryamAPI = 'c032db1688814ad2a60c898cd468cc51';
+  //const TomAPI = '5b5269dd70b849018665136bf0eb41c9';
+  const AlinaAPI2 = 'ef968f4556ed4b3f880221d46d7bd1b9';
+   //const MaryamAPI = 'c032db1688814ad2a60c898cd468cc51';
   console.log(day);
 
   function updateDay(day) {
     setDay(day);
   }
 
-  let testURL = `https://api.spoonacular.com/mealplanner/generate?apiKey=${TomAPI}&timeFrame=day&targetCalories=${props.calorie}&diet=${props.diet}&excluded=${props.allergy[0]}`;
+  let testURL = `https://api.spoonacular.com/mealplanner/generate?apiKey=${AlinaAPI2}&timeFrame=day&targetCalories=${props.calorie}&diet=${props.diet}&excluded=${props.allergy[0]}`;
 
   useEffect(() => {
     function getMealData() {
@@ -68,6 +68,8 @@ function MealPlanForm(props) {
       </div>
       <div className="MealPlanCreated">
         {mealData != null ? <MealList mealData={mealData} /> : <Loading />}
+
+
       </div>
     </div>
   );

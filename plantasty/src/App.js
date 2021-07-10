@@ -9,6 +9,7 @@ import VegucateMe from './Pages/VegucateMe';
 import MealPlanCreated from './Pages/MealPlanCreated';
 import CreateMealPlan from './Pages/CreateMealPlan';
 import ShoppingListPage from './Pages/ShoppingListPage';
+import Favourites from './Pages/Favourites';
 
 function App() {
   const [allergies, setAllergies] = useState([]);
@@ -60,6 +61,9 @@ function App() {
           {/* <Route path="/createplan/q2">
             <Q2 />
           </Route> */}
+          <Route path="/favourites">
+            <Favourites />
+          </Route>
           <Route path="/vegucate">
             <VegucateMe />
           </Route>
