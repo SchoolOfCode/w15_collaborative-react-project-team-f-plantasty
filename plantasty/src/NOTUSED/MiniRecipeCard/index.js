@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './MiniRecipeCard.module.css';
-import TextButton from '../TextButton';
+import TextButton from '../../Components/TextButton';
 
 function MiniRecipeCard(props) {
   return (
