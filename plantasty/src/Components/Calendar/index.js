@@ -1,13 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import TextButton from '../TextButton';
+import style from '../TextButton/button.module.css';
 
-export default function Calendar() {
+function Calendar(props) {
   return (
-    <div>
-      <Link to={'/myplan'}>
-        <TextButton text={'Monday'} />
-      </Link>
+    <Link to={'/myplan'}>
+      <button
+        className={style.textButton}
+        value={props.value}
+        onClick={(event) => props.getDay(event.target.value)}
+      >
+        {props.text}
+      </button>
+    </Link>
+  );
+}
+
+export default Calendar;
+
+/*       
       <Link to={'/myplan'}>
         <TextButton text={'Tuesday'} />
       </Link>
@@ -25,7 +36,4 @@ export default function Calendar() {
       </Link>
       <Link to={'/myplan'}>
         <TextButton text={'Sunday'} />
-      </Link>
-    </div>
-  );
-}
+      </Link> */
