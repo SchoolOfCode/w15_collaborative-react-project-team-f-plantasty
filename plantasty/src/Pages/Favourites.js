@@ -5,6 +5,7 @@ import FavouriteRecipeCard from '../Components/FavouriteRecipeCard';
 function Favourites() {
   const [isLoading, setIsloading] = useState(true);
   const [loadedRecipes, setLoadedRecipes] = useState([]);
+  const isEmpty = loadedRecipes.length === 0;
 
   useEffect(() => {
     setIsloading(true);
@@ -28,8 +29,6 @@ function Favourites() {
       });
     console.log('These are the loaded recipes:', loadedRecipes);
   }, []);
-
-  const isEmpty = loadedRecipes.length === 0;
 
   if (isLoading) {
     return (
