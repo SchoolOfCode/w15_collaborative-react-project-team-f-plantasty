@@ -44,12 +44,7 @@ function Favourites() {
         <h1>No saved recipes</h1>
       ) : (
         loadedRecipes.map((meal) => {
-          return (
-            <div>
-              <h1>Your saved recipes</h1>
-              <FavouriteRecipeCard key={meal.id} meal={meal} />
-            </div>
-          );
+          return <FavouriteRecipeCard key={meal.id} meal={meal} />;
         })
       )}
     </div>
