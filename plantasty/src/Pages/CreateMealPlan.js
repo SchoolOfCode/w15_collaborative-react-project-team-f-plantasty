@@ -16,7 +16,7 @@ let intolerances = [
   'shellfish',
   'soy',
   'sulfite',
-  'sree Nut',
+  'tree Nut',
   'wheat',
 ];
 

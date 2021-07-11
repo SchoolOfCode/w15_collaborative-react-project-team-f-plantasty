@@ -32,8 +32,6 @@ function App() {
 
   console.log(diets);
 
-  console.log(diets);
-
   return (
     <div>
       <BrowserRouter>
