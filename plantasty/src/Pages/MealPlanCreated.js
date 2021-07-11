@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import MealList from '../Components/MealList';
 import Calendar from '../Components/Calendar';
 import Broccoli from '../Components/Broccoli';
-import Loading from '../Components/Loading';
 
 let days = [
   'Monday',
@@ -52,13 +51,6 @@ function MealPlanForm(props) {
     getMealData();
   }, [testURL, day]);
 
-  if (isLoading) {
-    return (
-      <div>
-        <Broccoli />
-      </div>
-    );
-  }
   return (
     <div>
       <div>
@@ -75,31 +67,14 @@ function MealPlanForm(props) {
         })}
       </div>
       <div className="MealPlanCreated">
-        {mealData != null ? <MealList mealData={mealData} /> : <Loading />}
+        {isLoading || mealData == null ? (
+          <Broccoli />
+        ) : (
+          <MealList mealData={mealData} />
+        )}
       </div>
     </div>
   );
 }
 
 export default MealPlanForm;
-
-// function and button way
-// function way
-// function getMealData() {
-//   fetch(testURL)
-//     .then((response) => response.json())
-//     .then((data) => {
-//       setMealData(data);
-//       console.log(data);
-//       console.log(testURL);
-//     })
-//     .catch(() => {
-//       console.log('error');
-//     });
-// }
-
-/* {mealData && <MealList mealData={mealData} />} */
-
-// <button className={style.textButton} onClick={getMealData}>
-//     Get Daily meal plan
-//   </button>
