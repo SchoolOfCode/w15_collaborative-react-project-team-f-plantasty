@@ -4,7 +4,8 @@ import style from '../TextButton/button.module.css';
 
 function Calendar(props) {
   return (
-    <Link to={'/myplan'}>
+    <div data-testid="calendar-container">
+    <Link  to={'/myplan'}>
       <button
         className={style.textButton}
         value={props.value}
@@ -13,6 +14,7 @@ function Calendar(props) {
         {props.text}
       </button>
     </Link>
+    </div>
   );
 }
 
