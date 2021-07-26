@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './card.module.css';
 
-function InfoCard({title}, {text}, {button}) {
+function InfoCard(props) {
   return (
     <section data-testid="info-card" className={styles.cardWrapper}>
       <div>
@@ -11,9 +11,9 @@ function InfoCard({title}, {text}, {button}) {
         />
       </div>
       <div>
-        <h1>{title}</h1>
-        <h3>{text}</h3>
-        <button>{button}</button>
+        <h1>{props.title}</h1>
+        <h3>{props.text}</h3>
+        <button>{props.button}</button>
       </div>
     
     </section>
