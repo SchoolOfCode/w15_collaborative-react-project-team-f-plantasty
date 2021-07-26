@@ -8,4 +8,4 @@ test(`Favourite recipe card should render on the DOM`, () => {
     const { getByTestId } = render(<FavouriteRecipeCard />);
     const actual = getByTestId('favourite-card');
     expect(actual).toBeInTheDocumet();
-})
+});
