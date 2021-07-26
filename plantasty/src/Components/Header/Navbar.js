@@ -5,7 +5,7 @@ import logo from '../../img/logo.png';
 
 function Navbar() {
   return (
-    <header className={styles.header}>
+    <header data-testid="navbar" className={styles.header}>
       <div className={styles.logo}>
         <Link to="/">
           <img src={logo} alt="logo"></img>
