@@ -6,7 +6,7 @@ function Calendar(props) {
   return (
     <div data-testid="calendar-container">
     <Link  to={'/myplan'}>
-      <button
+      <button data-testid="button"
         className={style.textButton}
         value={props.value}
         onClick={(event) => props.getDay(event.target.value)}

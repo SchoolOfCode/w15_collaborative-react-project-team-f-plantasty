@@ -3,7 +3,7 @@ import styles from './favouritesButton.module.css';
 
 export default function FavouritesButton(props) {
   return (
-    <div>
+    <div data-testid="favourite-button">
       <button onClick={props.handleClick} className={styles.favouritesButton}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
