@@ -1,0 +1,14 @@
+img {
+  border: orangered;
+  width: 400px;
+  height: 300px;
+}
+
+.cardWrapper {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  margin: 30px;
+}

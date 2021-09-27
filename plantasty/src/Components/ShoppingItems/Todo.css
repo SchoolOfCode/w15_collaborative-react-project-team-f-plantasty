@@ -1,0 +1,28 @@
+.todo_delete_button {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  margin-left: 60px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.todo_list_container {
+  text-align: left;
+  padding-left: 20%;
+  position: absolute;
+  top: 17%;
+  bottom: 0;
+  left: 0;
+}
+
+.isItemCompleted-done {
+  text-decoration: line-through;
+}
+
+.isItemCompleted {
+  text-decoration: none;
+}
