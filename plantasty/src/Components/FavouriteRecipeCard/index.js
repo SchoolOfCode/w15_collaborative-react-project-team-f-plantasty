@@ -29,7 +29,7 @@ export default function FavouriteRecipeCard({ meal }) {
   }
 
   return (
-    <div className={styles.recipeContainer}>
+    <div data-testid="favourite-card" className={styles.recipeContainer}>
       <h1>{meal.title}</h1>
       <img src={imageUrl} alt="recipe" />
       <div className={styles.infoRecipe}>

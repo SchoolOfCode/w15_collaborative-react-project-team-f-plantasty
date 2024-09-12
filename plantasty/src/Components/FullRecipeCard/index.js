@@ -49,7 +49,7 @@ export default function FullRecipeCard({ meal }) {
   }
 
   return (
-    <div className={styles.recipeContainer}>
+    <div data-testid = "recipe-card" className={styles.recipeContainer}>
       <h1>{meal.title}</h1>
       <img src={imageUrl} alt="recipe" />
       <div className={styles.infoRecipe}>
